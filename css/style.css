@@ -1,7 +1,8 @@
 :root {
-    --no-name: red;
+    --test-name: red;
 }
 
+/* GENERAL */
 body {
     font-family: Inter;
     font-weight: 400;
@@ -19,6 +20,42 @@ body {
     flex-direction: row;
     list-style: none;
 
+}
+
+.button {
+    width: 260px;
+    border-radius: 45px 0px 45px 0px;
+    color: rgba(38, 198, 234, 1);
+    /* --button-color */
+    border: 2px solid rgba(38, 199, 234, 1);
+    background-color: rgba(11, 14, 102, 1);
+    font-weight: 400;
+    font-family: HeadlandOne;
+}
+
+.button:nth-child(1) {
+    width: 141px;
+    height: 41.69px;
+    margin: 24px 0px;
+    font-size: 20px;
+    line-height: 0.96;
+    text-align: justified;
+
+}
+
+.button:nth-child(2) {
+    width: 260px;
+    font-size: 24px;
+    line-height: 1.15;
+    text-align: justified;
+
+}
+
+.button:nth-child(3) {
+    width: 260px;
+    font-size: 24px;
+    line-height: 1.15;
+    text-align: justified;
 }
 
 /* HEADER */
@@ -45,12 +82,13 @@ body {
 .nav-link {
     text-align: left;
     padding-top: 10px;
-    color: rgba(255, 255, 255, 1);    /*var(--nav-link); */
+    color: rgba(255, 255, 255, 1);
+    /*var(--nav-link); */
     text-align: center;
     text-decoration: none;
     letter-spacing: 0.02em;
     font-style: normal;
- line-height: 0.93;
+    line-height: 0.93;
     font-size: 20px;
     font-weight: 300;
 
@@ -79,35 +117,50 @@ body {
     margin-right: 168px;
 }
 
-.button {
-    width: 141px;
-    height: 41.69px;
-    border-radius: 35px 0px;
-    margin: 24px 0px;
-    border: 2px solid rgba(38, 199, 234, 1);
-    background-color: rgba(11, 14, 102, 1);
-    color: rgba(38, 198, 234, 1);    /* --button-color */
-    font-family: HeadlandOne;
-font-size: 20px;
-font-weight: 400;
-line-height: 0.96;
-text-align: justified;
 
-}
 /* HERO */
-.hero{
-background-image: url(../images/hero-background.png);
-background-size:100%;
+.hero {
+    background-image: url(../images/hero-background.png);
+    background-size: 100%;
 }
-.hero-item::before{
-    margin: 0px;
-   content: "";
-   display: flex;
-   height: 40px;
 
-   background-position: center;
+.hero-item:nth-child(2)::before {
+    margin: 0px;
+    content: "";
+    display: flex;
+    height: 40px;
+    background-position: center;
 }
-.hero-item:nth-child(2){
+
+.hero-item:nth-child(2) {
     background-image: url(../images/arrow-white.png);
     background-repeat: no-repeat;
+}
+
+.hero-text {
+    font-size: 20px;
+    line-height: 0.93;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+}
+
+/* QUOTE SECTION */
+.quote-section{
+    color: rgba(20, 20, 20, 1);
+}
+.quote-section:nth-child(2){
+    color:rgba(10, 56, 83, 1);
+}
+
+.quote-text {
+    font-size: 36px;
+    line-height: 1.67;
+
+}
+
+.quote-author {
+    font-size: 24px;
+    line-height: 1.11;
+    text-align: center;
+    color: rgb(0, 0, 0, 1)
 }
