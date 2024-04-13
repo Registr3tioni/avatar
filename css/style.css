@@ -8,6 +8,13 @@ body {
     font-weight: 400;
 }
 
+.main-container {
+    width: 1440px;
+    margin: 0 auto;
+
+    outline: 1px dashed rgb(12, 235, 23);
+}
+
 .container {
     width: 1033px;
     margin: 0 auto;
@@ -17,46 +24,45 @@ body {
 
 .flex {
     display: flex;
-    flex-direction: row;
-    list-style: none;
+}
 
+section .flex {
+    flex-direction: row;
+}
+
+.hero-div-column {
+    flex-direction: column;
+    margin: 0px 660px 0px 0px;
 }
 
 .button {
-    width: 260px;
     border-radius: 45px 0px 45px 0px;
     color: rgba(38, 198, 234, 1);
     /* --button-color */
     border: 2px solid rgba(38, 199, 234, 1);
     background-color: rgba(11, 14, 102, 1);
     font-weight: 400;
-    font-family: HeadlandOne;
+    /* font-family: HeadlandOne; */
 }
 
-.button:nth-child(1) {
-    width: 141px;
-    height: 41.69px;
-    margin: 24px 0px;
-    font-size: 20px;
-    line-height: 0.96;
-    text-align: justified;
+.flex .button {
+    white-space: pre;
 
 }
 
-.button:nth-child(2) {
-    width: 260px;
+
+.navigation +.button {
     font-size: 24px;
     line-height: 1.15;
-    text-align: justified;
-
+    width:141px
 }
-
-.button:nth-child(3) {
-    width: 260px;
+.hero-list + .button{
     font-size: 24px;
     line-height: 1.15;
-    text-align: justified;
+    width: 260px;
 }
+
+
 
 /* HEADER */
 .navigation,
@@ -66,7 +72,6 @@ body {
 .contacts-item,
 .contacts-list {
     display: flex;
-
 }
 
 .nav-list {
@@ -101,14 +106,15 @@ body {
 }
 
 .header {
-    padding: 39px 0px;
     border-bottom: 3px solid (255, 255, 255, 1);
     background: url(../images/header-footer-back.png)rgba(43, 74, 97, 0.87);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: -230px;
-}
 
+}
+.header .container{
+    padding: 39px 0px;
+}
 
 
 .logo {
@@ -117,11 +123,16 @@ body {
     margin-right: 168px;
 }
 
+.nav-list .button{
+    position: absolute;
+}
 
 /* HERO */
 .hero {
     background-image: url(../images/hero-background.png);
     background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero-item:nth-child(2)::before {
@@ -130,26 +141,82 @@ body {
     display: flex;
     height: 40px;
     background-position: center;
+    padding: 0px 0px 0px 57px;
+    text-align: center;
+    float: center;
 }
 
 .hero-item:nth-child(2) {
     background-image: url(../images/arrow-white.png);
     background-repeat: no-repeat;
+
 }
+
+.hero .container {
+    padding: 180px 0px 179px 0px;
+}
+
+
 
 .hero-text {
     font-size: 20px;
     line-height: 0.93;
     text-align: left;
     color: rgba(255, 255, 255, 1);
+    white-space: pre-line;
 }
 
-/* QUOTE SECTION */
-.quote-section{
-    color: rgba(20, 20, 20, 1);
+.social-list {
+    padding: 120px 0px 0px 0px;
 }
-.quote-section:nth-child(2){
-    color:rgba(10, 56, 83, 1);
+
+.social-img:not(:first-of-type) {
+    padding: 24px 0px 0px 0px;
+}
+
+.hero-list {
+    padding: 0px 0px 42px 0px;
+}
+
+.hero-list+button {
+    border: 3px solid rgba(38, 199, 234, 1)
+}
+
+/* TRAILER */
+
+.trailer {
+    background-image: url(../images/navi.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.trailer .container{
+display: flex;
+justify-content: center;
+padding: 330px 0px 331px;
+
+
+}
+.trailer .container .button{
+        width: 260px;
+        height: 41.69px;
+        font-size: 24px;
+        line-height: 1.15;
+
+}
+
+
+/* QUOTE SECTION */
+.quote-section {
+    display: flex;
+    color: rgba(20, 20, 20, 1);
+    justify-items: center;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.quote-section:nth-child(2) {
+    color: rgba(10, 56, 83, 1);
 }
 
 .quote-text {
@@ -159,36 +226,119 @@ body {
 }
 
 .quote-author {
+    padding: 16px 0px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     font-size: 24px;
     line-height: 0.92;
-    text-align: center;
     color: rgb(0, 0, 0, 1)
 }
 
-/* DICTIONARY */
-.dictionary-text{
-    font-family: HeadlandOne;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 0.92;  
+.quote-author::after {
+    content: "";
+    align-self: center;
+    width: 400px;
+    height: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
-.dictionary-text:nth-child(1){
+
+.quote-author:nth-child(1)::after {
+    background-image: url(../images/bird.png);
+}
+
+.quote-author:nth-child(2)::after {
+    background-image: url(../images/bird.png);
+}
+
+.quote-author:nth-child(13)::after {
+    background-image: url(../images/bird.png);
+}
+
+
+/* DICTIONARY */
+.section-dictionary .container {
+    padding: 58px 0px 57px 0px;
+}
+
+.dictionary-title {
+    font-family: HeadlandOne;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40.08px;
+    text-align: justified;
     color: rgb(20, 20, 20, 1);
 }
-.dictionary-text:nth-child(2){
-    color: rgb(0, 0, 0, 1);
+
+.section-dictionary {
+    background-image: url(../images/islands.jpg);
 }
+
+.dictionary-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.dictionary-item {
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-right: 36px;
+    margin-bottom: 24px;
+}
+
+.dictionary-text {
+    font-family: "HeadlandOne";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 0.92;
+    text-align: center;
+}
+.dictionary-text:nth-child(1){
+    padding-top: 36px;
+}
+.dictionary-text:nth-child(2){
+    padding-bottom: 36px;
+}
+
+/* IMAGES DICTIONARY */
+
+.dictionary-text:nth-child(1)::after {
+    margin: 0px;
+    content: "";
+    display: flex;
+    align-self: center;
+    width: 152px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.dictionary-text {
+    background-image: url(../images/arrow-left.png);
+}
+
+/* IMAGES DICTIONARY */
+
+
 /* FOOTER */
- footer{
+footer {
     color: rgba(255, 255, 255, 1);
     background-image: url(../images/header-footer-back.png);
- }
- .mails-item{
-font-size: 20px;
-line-height: 0.93;
+}
 
- }
- .copywrite{
-font-size: 14px;
-line-height: 0.65;
- }
+.mails-item {
+    font-size: 20px;
+    line-height: 0.93;
+
+}
+
+.mails-link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1)
+}
+
+.copywrite {
+    font-size: 14px;
+    line-height: 0.65;
+}
