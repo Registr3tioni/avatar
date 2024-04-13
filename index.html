@@ -17,55 +17,67 @@
 </head>
 
 <body>
+    <div class="main-container">
     <header class="header">
         <div class="container flex">
             <nav class="navigation">
-                <img class="logo" src="./images/logo.png" alt="logo">
+                <a href="#">
+                    <img class="logo" src="./images/logo.png" alt="logo">
+                </a>
                 <ul class="nav-list">
-                    <li class="nav-item"><a class="nav-link" href="./index.html">Головна</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./portfolio.html">Про нас</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./">Контакти</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Головна</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Про нас</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Контакти</a></li>
                 </ul>
             </nav>
             <button class="button">Увійти</button>
+            <ul class="lang-list">
+                <li class="lang-item"><button class="lang-button">Eng</button></li>
+                <li class="lang-item"><button class="lang-button">Ua</button></li>
+            </ul>
         </div>
     </header>
     <main>
+
         <section class="hero">
             <div class="container flex">
+                <div class="hero-div-column">
                 <ul class="hero-list">
                     <li class="hero-item">
-                        <h2 class="hero-text">
+                        <p class="hero-text">
                             Oe perlltxe hu tsamsiyu!
                             Ngari hu Eywa salew tirea,
                             tokx 'ì'awn slu Na'viyä hapxì.
                             Säwem nìayoeng!
-                        </h2>
+                        </p>
                     </li>
                     <li class="hero-item">
-                        <h2 class="hero-text">
+                        <p class="hero-text">
                             Хоробрий воїне, звертаюсь до тебе!
                             Твій дух йде з Ейвою,
                             твоє тіло залишається,
                             щоб стати частиною Народу.
                             Борись разом з нами!
-                        </h2>
+                        </p>
                     </li>
                 </ul>
-                <ul class="hero-icon-list">
-                    <li class="icon-items">
-                        <img class="icon" src="./images/inst.png" alt="">
+                <button class="button">Приєднатися до
+клану</button>
+                </div>
+                <ul class="social-list">
+                    <li class="social-img">
+                        <img class="social-img" src="./images/inst.png" alt="">
                     </li>
-                    <li class="icon-items">
-                        <img class="icon" src="./images/x.png" alt="">
+                    <li class="social-img">
+                        <img class="social-img" src="./images/x.png" alt="">
                     </li>
-                    <li class="icon-items">
-                        <img class="icon" src="./images/youtube.png" alt="">
+                    <li class="social-img">
+                        <img class="social-img" src="./images/youtube.png" alt="">
                     </li>
                 </ul>
-                <button class="button">
+                <!-- <button class="button">
                     Приєднатися до клану
-                </button>
+                </button> -->
             </div>
         </section>
         <section class="quote-section">
@@ -74,13 +86,13 @@
                     ПРИЙДУТЬ, ЯК ГРОЗА, ЯКА НІКОЛИ НЕ ЗАКІНЧУЄТЬСЯ.”
                 </h2>
                 <p class="quote-author">Джейк Саллі</p>
-                <img class="bird" src="./images/bird.png" alt="bird">
+                <!-- <img class="bird" src="./images/bird.png" alt="bird"> -->
             </div>
         </section>
         <section class="trailer">
             <div class="container">
-            <button class="button">Дивитись трейлер</button>
-        </div>
+                <button class="button">Дивитись трейлер</button>
+            </div>
         </section>
         <section class="quote-section">
             <div class="container">
@@ -88,7 +100,7 @@
                     ОДНОГО ДНЯ ЇЇ ДОВЕДЕТЬСЯ ПОВЕРНУТИ.”
                 </h2>
                 <p class="quote-author">Джейк Саллі</p>
-                <img class="bird" src="./images/bird.png" alt="bird">
+                <!-- <img class="bird" src="./images/bird.png" alt="bird"> -->
             </div>
         </section>
         <section class="section-dictionary">
@@ -98,28 +110,28 @@
                 </h2>
                 <ul class="dictionary-list">
                     <li class="dictionary-item">
-                        <p>Привіт</p>
-                        <p>Kaltxì</p>
+                        <p class="dictionary-text">Привіт</p>
+                        <p class="dictionary-text">Kaltxì</p>
                     </li>
                     <li class="dictionary-item">
-                        <p>Як справи?</p>
-                        <p>Ngaru lu fpom srak?</p>
+                        <p class="dictionary-text">Як справи?</p>
+                        <p class="dictionary-text">Ngaru lu fpom srak?</p>
                     </li>
                     <li class="dictionary-item">
-                        <p>Все добре</p>
-                        <p>Lu fpom</p>
+                        <p class="dictionary-text">Все добре</p>
+                        <p class="dictionary-text">Lu fpom</p>
                     </li>
                     <li class="dictionary-item">
-                        <p>Дякую</p>
-                        <p>Irayo si </p>
+                        <p class="dictionary-text">Дякую</p>
+                        <p class="dictionary-text">Irayo si </p>
                     </li>
                     <li class="dictionary-item">
-                        <p>Я бачу тебе</p>
-                        <p>Oel ngati kameie</p>
+                        <p class="dictionary-text">Я бачу тебе</p>
+                        <p class="dictionary-text">Oel ngati kameie</p>
                     </li>
                     <li class="dictionary-item">
-                        <p>Слідуй за мною</p>
-                        <p>Nong oet!</p>
+                        <p class="dictionary-text">Слідуй за мною</p>
+                        <p class="dictionary-text">Nong oet!</p>
                     </li>
                 </ul>
             </div>
@@ -130,23 +142,28 @@
                     ВОНА ЗАХИЩАЄ ЛИШЕ ЖИТТЄВИЙ БАЛАНС.”
                 </h2>
                 <p class="quote-author">Нейтірі</p>
-                <img class="bird" src="./images/bird.png" alt="bird">
+                <!-- <img class="bird" src="./images/bird.png" alt="bird"> -->
             </div>
         </section>
     </main>
     <footer>
         <div class="container">
+            <a href="#"><img class="logo" src="./images/logo.png" alt="logo"></a>
             <address>
-                <img class="logo" src="./images/logo.png" alt="logo">
                 <ul class="mails-list">
-                    <li class="mails-item">Q&A E-mail - - ---- - - avatartwowqa@gmail.com</li>
-                    <li class="mails-item">Cooperation E-mail - - ---- - - avatartwowcoop@gmail.com</li>
+                    <li class="mails-item"><a class="mails-link"
+                        href="mailto:avatartwowqa@gmail.com">avatartwowqa@gmail.com</a>
+                </li>
+                <li class="mails-item"><a class="mails-link"
+                    href="mailto:avatartwowcoop@gmail.com">avatartwowcoop@gmail.com</a>
+            </li>
                 </ul>
                 <p class="copywrite">©2023 Avatar: The Way Of Water. All rights reserved</p>
             </address>
         </div>
         </section>
     </footer>
+</div>
 </body>
 
 </html>
