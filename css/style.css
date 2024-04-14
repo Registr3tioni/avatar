@@ -139,12 +139,10 @@ section .flex {
     background-repeat: no-repeat;
     text-align: center;
     padding-right: 86px;
-}
-
-.lang-item:first-child {
     background-image: url(../images/switcher.png);
     background-position: 40px;
 }
+
 
 /* HERO */
 .hero {
