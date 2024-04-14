@@ -9,9 +9,9 @@ body {
 }
 
 .main-container {
+    position: relative;
     width: 1440px;
     margin: 0 auto;
-
     outline: 1px dashed rgb(12, 235, 23);
 }
 
@@ -22,9 +22,10 @@ body {
     outline: 1px dashed tomato;
 }
 
-.flex {
+/* .flex {
     display: flex;
-}
+    align-items: center;
+} */
 
 section .flex {
     flex-direction: row;
@@ -45,18 +46,9 @@ section .flex {
     /* font-family: HeadlandOne; */
 }
 
-.flex .button {
-    white-space: pre;
-
-}
 
 
-.navigation +.button {
-    font-size: 24px;
-    line-height: 1.15;
-    width:141px
-}
-.hero-list + .button{
+.hero-list+.button {
     font-size: 24px;
     line-height: 1.15;
     width: 260px;
@@ -65,17 +57,32 @@ section .flex {
 
 
 /* HEADER */
+.header {
+    border-bottom: 3px solid (255, 255, 255, 1);
+    background: url(../images/header-footer-back.png)rgba(43, 74, 97, 0.87);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.header .container {
+    padding: 39px 0px;
+}
+
+
+.logo {
+    width: 186px;
+    height: 72px;
+    margin-right: 168px;
+}
+.flex,
 .navigation,
-.logo,
 .nav-list,
-.nav-item,
-.contacts-item,
 .contacts-list {
     display: flex;
+    align-items: center;
 }
 
 .nav-list {
-    padding: 24px 0px 0px 0px;
     margin-right: 212px;
 }
 
@@ -85,12 +92,8 @@ section .flex {
 }
 
 .nav-link {
-    text-align: left;
-    padding-top: 10px;
     color: rgba(255, 255, 255, 1);
     /*var(--nav-link); */
-    text-align: center;
-    text-decoration: none;
     letter-spacing: 0.02em;
     font-style: normal;
     line-height: 0.93;
@@ -104,27 +107,41 @@ section .flex {
     font-weight: 600;
     /*var(--nav-link-actvive); */
 }
+.navigation+.button {
+    font-size: 24px;
+    line-height: 1.15;
 
-.header {
-    border-bottom: 3px solid (255, 255, 255, 1);
-    background: url(../images/header-footer-back.png)rgba(43, 74, 97, 0.87);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-.header .container{
-    padding: 39px 0px;
+    padding: 9px 38px 7.69px;
 }
 
 
-.logo {
-    width: 186px;
-    height: 72px;
-    margin-right: 168px;
-}
 
-.nav-list .button{
+
+
+
+.lang-list {
     position: absolute;
+    top: 65px;
+    right: 48px;
+    display: flex;
+}
+
+.lang-item {
+    color: rgba(255, 255, 255, 1);
+}
+
+.lang-item:first-child {
+    content: "";
+    width: 36px;
+    height: 20px;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-right: 86px;
+}
+
+.lang-item:first-child {
+    background-image: url(../images/switcher.png);
+    background-position: 40px;
 }
 
 /* HERO */
@@ -190,18 +207,20 @@ section .flex {
     background-size: cover;
 
 }
-.trailer .container{
-display: flex;
-justify-content: center;
-padding: 330px 0px 331px;
+
+.trailer .container {
+    display: flex;
+    justify-content: center;
+    padding: 330px 0px 331px;
 
 
 }
-.trailer .container .button{
-        width: 260px;
-        height: 41.69px;
-        font-size: 24px;
-        line-height: 1.15;
+
+.trailer .container .button {
+    width: 260px;
+    height: 41.69px;
+    font-size: 24px;
+    line-height: 1.15;
 
 }
 
@@ -268,7 +287,7 @@ padding: 330px 0px 331px;
     font-size: 32px;
     font-weight: 400;
     line-height: 40.08px;
-    text-align: justified;
+    text-align: center;
     color: rgb(20, 20, 20, 1);
 }
 
@@ -294,16 +313,18 @@ padding: 330px 0px 331px;
     line-height: 0.92;
     text-align: center;
 }
-.dictionary-text:nth-child(1){
+
+.dictionary-text:nth-child(1) {
     padding-top: 36px;
 }
-.dictionary-text:nth-child(2){
+
+.dictionary-text:nth-child(2) {
     padding-bottom: 36px;
 }
 
 /* IMAGES DICTIONARY */
 
-.dictionary-text:nth-child(1)::after {
+.dictionary-text:first-child::after {
     margin: 0px;
     content: "";
     display: flex;
@@ -312,10 +333,12 @@ padding: 330px 0px 331px;
     height: 40px;
     background-position: center;
     background-repeat: no-repeat;
+    text-align: center;
 }
 
-.dictionary-text {
+.dictionary-text:first-child {
     background-image: url(../images/arrow-left.png);
+    background-repeat: no-repeat;
 }
 
 /* IMAGES DICTIONARY */
