@@ -254,6 +254,9 @@ section .flex {
 .quote-section:nth-child(2) {
     color: rgba(10, 56, 83, 1);
 }
+.quote-section{
+    margin-top: 75px;
+}
 
 .quote-text {
     font-size: 36px;
@@ -385,6 +388,7 @@ section .flex {
     background-image: url(../images/arrow-left.png);
     background-repeat: no-repeat;
     text-align: center;
+    box-sizing: content-box;
 }
 .dictionary-item:nth-child(2) .dictionary-text-ua:first-child::after{
     background-image: url(../images/bird.png);
@@ -393,7 +397,7 @@ section .flex {
     background-image: url(../images/bird.png);
 }
 .dictionary-item .dictionary-text-eng:first-child::after{
-    padding-top: 80px;
+    padding-top: 40px;
     margin-left:85px ;
     margin-right:83px ;
     content: "";
