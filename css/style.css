@@ -35,7 +35,7 @@ section .flex {
     margin: 0px 660px 0px 0px;
 }
 
-.button-ua {
+.link-ua {
     border-radius: 45px 0px 45px 0px;
     color: rgba(38, 198, 234, 1);
     /* --button-color */
@@ -45,7 +45,7 @@ section .flex {
     /* font-family:HeadlandOne; НЕ ПРАЦЮЄ В ФІГМІ І ВСЮДИ */
     font-family: Inter;
 }
-.button-eng{
+.link-eng{
     border-radius: 45px 0px 45px 0px;
     color: rgba(38, 198, 234, 1);
     /* --button-color */
@@ -59,7 +59,7 @@ section .flex {
 
 /* HEADER */
 .header {
-    border-bottom: 3px solid (255, 255, 255, 1);
+    border-bottom: 3px solid rgb(255, 255, 255, 1);
     background: url(../images/header-footer-back.png)rgba(43, 74, 97, 0.87);
     background-repeat: no-repeat;
     background-size: cover;
@@ -97,7 +97,6 @@ section .flex {
 .nav-link {
     color: rgba(255, 255, 255, 1);
     /*var(--nav-link); */
-    letter-spacing: 0.02em;
     font-style: normal;
     line-height: 0.93;
     font-size: 20px;
@@ -111,12 +110,13 @@ section .flex {
     /*var(--nav-link-actvive); */
 }
 
-.navigation+.button-ua {
+.navigation+.link-ua {
+    padding: 9px 38px 7.69px;
+    width: 141px;
     font-size: 24px;
     line-height: 1.15;
-    padding: 9px 38px 7.69px;
 }
-.navigation+.button-eng {
+.navigation+.link-eng {
     font-size: 24px;
     line-height: 1.15;
     padding: 9px 38px 7.69px;
@@ -193,7 +193,9 @@ section .flex {
 .social-list {
     padding: 16px 0px 0px 0px;
 }
-
+.social-img{
+justify-content: space-between;
+}
 .social-img:not(:first-of-type) {
     padding: 24px 0px 0px 0px;
 }
@@ -207,13 +209,13 @@ section .flex {
 .hero-list-eng+button {
     border: 3px solid rgba(38, 199, 234, 1);
 }
-.hero-list-ua+.button-ua,
-.hero-list-eng+.button-eng {
+.hero-list-ua+.link-ua,
+.hero-list-eng+.link-eng {
     font-size: 24px;
     line-height: 1.15;
     width: 260px;
 }
-.hero-list-eng+.button-eng{
+.hero-list-eng+.link-eng{
     padding:25px 75px;
     font-family: HeadlandOne;
 }
@@ -234,8 +236,8 @@ section .flex {
 
 }
 
-.trailer .container .button-ua,
-.trailer .container .button-eng {
+.trailer .container .link-ua,
+.trailer .container .link-eng {
     font-size: 24px;
     line-height: 1.15;
     padding: 25px 20px 19px;
@@ -244,6 +246,7 @@ section .flex {
 
 /* QUOTE SECTION */
 .quote-section {
+    padding-top: 75px;
     display: flex;
     color: rgba(20, 20, 20, 1);
     justify-items: center;
@@ -254,16 +257,14 @@ section .flex {
 .quote-section:nth-child(2) {
     color: rgba(10, 56, 83, 1);
 }
-.quote-section{
-    margin-top: 75px;
-}
 
 .quote-text {
     font-size: 36px;
     line-height: 1.67;
-
 }
-
+/* .quote-text:not(:first-child){
+    padding-top: 4px;
+} */
 .quote-author {
     padding: 16px 0px 8px 0px;
     display: flex;
@@ -281,8 +282,8 @@ section .flex {
     height: 120px;
     background-position: center;
     background-repeat: no-repeat;
-
-}
+    padding: 8px 0px 0px 0px;
+}   
 
 .quote-author:nth-child(1)::after {
     background-image: url(../images/bird.png);
