@@ -39,13 +39,15 @@ section .flex {
     border-radius: 45px 0px 45px 0px;
     color: rgba(38, 198, 234, 1);
     /* --button-color */
+    text-align: center;
     border: 2px solid rgba(38, 199, 234, 1);
     background-color: rgba(11, 14, 102, 1);
     font-weight: 400;
     /* font-family:HeadlandOne; НЕ ПРАЦЮЄ В ФІГМІ І ВСЮДИ */
     font-family: Inter;
 }
-.link-eng{
+
+.link-eng {
     border-radius: 45px 0px 45px 0px;
     color: rgba(38, 198, 234, 1);
     /* --button-color */
@@ -53,14 +55,14 @@ section .flex {
     background-color: rgba(11, 14, 102, 1);
     font-weight: 400;
     /* font-family:HeadlandOne; НЕ ПРАЦЮЄ В ФІГМІ І ВСЮДИ */
-    font-family:HeadlandOne;
+    font-family: HeadlandOne;
 }
 
 
 /* HEADER */
 .header {
     border-bottom: 3px solid rgb(255, 255, 255, 1);
-    background: url(../images/header-footer-back.png)rgba(43, 74, 97, 0.87);
+    background-image: linear-gradient(rgba(43, 74, 97, 0.87), rgba(43, 74, 97, 0.87)), url(../images/header-footer-back.png);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -112,10 +114,14 @@ section .flex {
 
 .navigation+.link-ua {
     padding: 9px 38px 7.69px;
+
+    display: flex;
+    justify-content: space-between;
     width: 141px;
     font-size: 24px;
     line-height: 1.15;
 }
+
 .navigation+.link-eng {
     font-size: 24px;
     line-height: 1.15;
@@ -146,13 +152,13 @@ section .flex {
     background-image: url(../images/switcher.png);
     background-position: 40px;
 }
-.lang-link{
+
+.lang-link {
     font-family: Hammersmith One;
     color: rgba(255, 255, 255, 1);
     background-color: transparent;
     border: none;
 }
-
 
 /* HERO */
 .hero {
@@ -171,9 +177,9 @@ section .flex {
     background-position: center;
     background-image: url(../images/arrow-white.png);
     background-repeat: no-repeat;
-    padding: 0px 0px 0px 57px;
+    padding: 4px 0px 0px 57px;
     text-align: center;
-    float: center;
+
 }
 
 .hero .container {
@@ -182,22 +188,30 @@ section .flex {
 
 
 
-.hero-text {
+.hero-item {
     font-size: 20px;
-    line-height: 0.93;
-    text-align: left;
+    line-height: 24.2px;
+
     color: rgba(255, 255, 255, 1);
-    white-space: pre-line;
+    width: 298px;
+    height: 96px;
 }
 
 .social-list {
     padding: 16px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
-.social-img{
-justify-content: space-between;
-}
+
 .social-img:not(:first-of-type) {
     padding: 24px 0px 0px 0px;
+}
+
+.hero-item:last-child {
+    width: 376px;
+    height: 123px;
+    margin-bottom: 42px;
 }
 
 .hero-list-ua,
@@ -209,16 +223,27 @@ justify-content: space-between;
 .hero-list-eng+button {
     border: 3px solid rgba(38, 199, 234, 1);
 }
+
+.hero-list-ua+.link-ua {
+    display: inline-block;
+}
+
 .hero-list-ua+.link-ua,
 .hero-list-eng+.link-eng {
     font-size: 24px;
     line-height: 1.15;
     width: 260px;
 }
-.hero-list-eng+.link-eng{
-    padding:25px 75px;
+
+.hero-list-ua+.link-ua {
+    padding: 10px 30px 10px 31px;
+}
+
+.hero-list-eng+.link-eng {
+    padding: 25px 75px;
     font-family: HeadlandOne;
 }
+
 /* TRAILER */
 
 .trailer {
@@ -231,7 +256,7 @@ justify-content: space-between;
 .trailer .container {
     display: flex;
     justify-content: center;
-    padding: 330px 0px 331px;
+    padding: 330px 0px 330px;
 
 
 }
@@ -240,7 +265,7 @@ justify-content: space-between;
 .trailer .container .link-eng {
     font-size: 24px;
     line-height: 1.15;
-    padding: 25px 20px 19px;
+    padding: 25px 20px 25px 19px;
 }
 
 
@@ -259,9 +284,12 @@ justify-content: space-between;
 }
 
 .quote-text {
+    font-weight: 400;
     font-size: 36px;
-    line-height: 1.67;
+    line-height: 1.3;
+    height: 92px;
 }
+
 /* .quote-text:not(:first-child){
     padding-top: 4px;
 } */
@@ -278,23 +306,28 @@ justify-content: space-between;
 .quote-author::after {
     content: "";
     align-self: center;
+    display: block;
     width: 400px;
     height: 120px;
     background-position: center;
+    vertical-align: middle;
     background-repeat: no-repeat;
-    padding: 8px 0px 0px 0px;
-}   
+}
 
 .quote-author:nth-child(1)::after {
     background-image: url(../images/bird.png);
+    size: 400px 120px;
+    margin-top: 8px;
 }
 
 .quote-author:nth-child(2)::after {
     background-image: url(../images/bird.png);
+    margin-top: 8px;
 }
 
 .quote-author:nth-child(13)::after {
     background-image: url(../images/bird.png);
+    margin-top: 8px;
 }
 
 
@@ -303,51 +336,49 @@ justify-content: space-between;
     padding: 58px 0px 57px 0px;
 }
 
-.dictionary-title {
-    font-family: HeadlandOne;
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 40.08px;
-    text-align: center;
-    color: rgb(20, 20, 20, 1);
-}
-
 .section-dictionary {
     background-image: url(../images/islands.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+
+.dictionary-title {
+    height: 40px;
+    margin-bottom: 45px;
+    font-family: HeadlandOne;
+    /* font-weight: 400; */
+    font-size: 32px;
+    text-align: center;
+    /* color: var(--color-font-main); */
+}
+
 .dictionary-list {
-    padding-top: 45px;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    column-gap: 37px;
+    row-gap: 24px;
 }
 
 .dictionary-item {
-    background-color: rgba(255, 255, 255, 0.7);
-    margin-right: 36px;
-    margin-bottom: 24px;
-    /* тут тре border-box; забрати
-    width: 320px;
-    height: 240px; TEST OPACITIES */
-}
-.dictionary-item:nth-child(3){
-    margin-right: 0px;
-}
-.dictionary-item:nth-child(6){
-    margin-right: 0px;
+    flex-basis: calc((100% - 74px) / 3);
+    padding-top: 36px;
+    padding-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFFFFF 70%;
 }
 
 
 .dictionary-text-ua {
     font-size: 24px;
     font-weight: 400;
-    line-height: 0.92;
+    line-height: 100%;
     text-align: center;
     color: #141414
 }
+
 .dictionary-text-eng {
     font-size: 24px;
     font-weight: 400;
@@ -358,16 +389,24 @@ justify-content: space-between;
 }
 
 .dictionary-text-ua:first-child {
-    margin-top: 36px;
+    text-align: center;
+
+    /*todo var. 2 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
 }
+
+.dictionary-text-ua:last-child {
+    margin-top: 40px;
+    line-height: 45px;
+}
+
 .dictionary-text-eng:first-child {
     margin-top: 36px;
 }
-.dictionary-text-ua:last-child {
-    margin-top: 40px;
-    padding-bottom: 36px;
 
-}
 .dictionary-text-eng:last-child {
     margin-top: 40px;
     padding-bottom: 36px;
@@ -375,59 +414,78 @@ justify-content: space-between;
 }
 
 /*! IMAGES DICTIONARY */
+.dictionary-text-ua:first-child::after {
+    content: "";
+    width: 152px;
+    height: 40px;
+    text-align: center;
+    margin-top: 31px;
+    background-repeat: no-repeat;
+    background-position: center;
 
-.dictionary-item .dictionary-text-ua:first-child::after{
-    padding-top: 80px;
-    margin-left:85px ;
-    margin-right:83px ;
+}
+
+.dictionary-item:nth-child(3n + 1) .dictionary-text-ua:first-child::after {
+    background-image: url(../images/arrow-left.png);
+    /* background-color: tomato; */
+}
+
+.dictionary-item:nth-child(3n + 2) .dictionary-text-ua:first-child::after {
+    background-image: url(../images/bird.png);
+    /* background-color: yellow; */
+}
+
+.dictionary-item:nth-child(3n + 3) .dictionary-text-ua:first-child::after {
+    transform: rotate(-180deg);
+    background-image: url(../images/arrow-left.png);
+
+}
+
+.dictionary-text-ua {
+    font-family: HeadlandOne;
+    font-size: 24px;
+    line-height: 100%;
+}
+
+
+.dictionary-item .dictionary-text-eng:first-child::after {
+    padding-top: 31px;
+    margin-left: 85px;
+    margin-right: 83px;
     content: "";
     display: flex;
     align-self: center;
-    width: 152px;
-    height: 40px;
     background-position: center;
     background-image: url(../images/arrow-left.png);
     background-repeat: no-repeat;
     text-align: center;
-    box-sizing: content-box;
 }
-.dictionary-item:nth-child(2) .dictionary-text-ua:first-child::after{
+
+.dictionary-item:nth-child(2) .dictionary-text-eng:first-child::after {
     background-image: url(../images/bird.png);
+    background-size: 150px 40px;
+
 }
-.dictionary-item:nth-child(5) .dictionary-text-ua:first-child::after{
+
+.dictionary-item:nth-child(5) .dictionary-text-eng:first-child::after {
     background-image: url(../images/bird.png);
-}
-.dictionary-item .dictionary-text-eng:first-child::after{
-    padding-top: 40px;
-    margin-left:85px ;
-    margin-right:83px ;
-    content: "";
-    display: flex;
-    align-self: center;
     width: 152px;
     height: 40px;
-    background-position: center;
-    background-image: url(../images/arrow-left.png);
-    background-repeat: no-repeat;
-    text-align: center;
 }
-.dictionary-item:nth-child(2) .dictionary-text-eng:first-child::after{
-    background-image: url(../images/bird.png);
-}
-.dictionary-item:nth-child(5) .dictionary-text-eng:first-child::after{
-    background-image: url(../images/bird.png);
-}
+
 /*! FOOTER */
+
 .footer {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    color: rgb(255, 255, 255, 1);
+    padding-top: 35px;
+    padding-bottom: 31px;
     background-color: gray;
     background-image:
-        linear-gradient(rgba(43, 74, 97, 0.87),
-            rgba(43, 74, 97, 0.87)),
+        linear-gradient(
+            rgba(43, 74, 97, 0.87),
+            rgba(43, 74, 97, 0.87)
+        ),
         url(../images/header-footer-back.png);
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
 }
 
 .box-logo-address {
@@ -438,7 +496,7 @@ justify-content: space-between;
 }
 
 .footer-logo {
-    width: 180px;
+    width: 183px;
     height: 70px;
     margin-right: 80px;
     /* outline: 2px dotted violet; */
@@ -461,26 +519,19 @@ justify-content: space-between;
 
 .mails-item {
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     font-size: 20px;
     line-height: 0.93;
 }
 
-/* .mails-item:first-child {
-    width: 665px;
-}
-.mails-item:last-child {
-    width: 689px;
-} */
-
 .mails-text,
 .mails-svg {
     margin-right: 20px;
+    color: #FFFFFF;
 }
 
 .mails-link {
-    color: rgba(255, 255, 255, 1)
+    color: #FFFFFF;
 }
 
 .copywrite {
@@ -488,4 +539,6 @@ justify-content: space-between;
     margin-left: 474px;
     font-size: 14px;
     line-height: 0.65;
+    color: #FFFFFF;
 }
+
