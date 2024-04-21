@@ -475,7 +475,8 @@ section .flex {
             rgba(43, 74, 97, 0.87)
         ),
         url(../images/header-footer-back.png);
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
+        background-size: cover;
 }
 
 .box-logo-address {
