@@ -141,16 +141,18 @@ section .flex {
 .lang-item {
     color: rgba(255, 255, 255, 1);
 }
-
+.lang-item:first-child{
+    padding-right: 12px;
+}
 .lang-item:first-child::after {
     content: "";
     width: 36px;
     height: 20px;
     background-repeat: no-repeat;
     text-align: center;
-    padding-right: 86px;
+    padding-right: 46px;
     background-image: url(../images/switcher.png);
-    background-position: 15px;
+    background-position: 10px;
 }
 
 .lang-link {
@@ -310,7 +312,6 @@ section .flex {
     width: 400px;
     height: 120px;
     background-position: center;
-    vertical-align: middle;
     background-repeat: no-repeat;
 }
 
@@ -367,7 +368,7 @@ section .flex {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #FFFFFF 70%;
+    background:rgba(255, 255, 255, 0.7);
 }
 
 
@@ -395,22 +396,11 @@ section .flex {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 40px;
 }
 
 .dictionary-text-ua:last-child {
+    line-height: 24px;
     margin-top: 40px;
-    line-height: 45px;
-}
-
-.dictionary-text-eng:first-child {
-    margin-top: 36px;
-}
-
-.dictionary-text-eng:last-child {
-    margin-top: 40px;
-    padding-bottom: 36px;
-
 }
 
 /*! IMAGES DICTIONARY */
@@ -524,7 +514,7 @@ section .flex {
 
 .mails-text,
 .mails-svg {
-    margin-right: 20px;
+    margin-right:19px;
     color: #FFFFFF;
 }
 
