@@ -30,10 +30,7 @@ section .flex {
     flex-direction: row;
 }
 
-.hero-div-column {
-    flex-direction: column;
-    margin: 0px 660px 0px 0px;
-}
+
 
 .link-ua {
     border-radius: 45px 0px 45px 0px;
@@ -204,9 +201,14 @@ section .flex {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+
+}
+.hero-div-column {
+    flex-direction: column;
+    margin: 0px 606px 0px 0px;
 }
 
-.social-img:not(:first-of-type) {
+.social-item:not(:first-of-type) {
     padding: 24px 0px 0px 0px;
 }
 
