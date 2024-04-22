@@ -103,7 +103,7 @@ section .flex {
 
 .nav-link:active {
     color: rgba(148, 207, 255, 1);
-    font-weight: 600;
+    font-weight: 400;
     /*var(--nav-link-actvive); */
 }
 
