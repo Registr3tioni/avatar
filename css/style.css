@@ -220,7 +220,12 @@ section .flex {
     height: 123px;
     margin-bottom: 42px;
 }
-
+.social-list-eng{
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
 .hero-list-ua,
 .hero-list-eng {
     padding: 0px 0px 42px 0px;
