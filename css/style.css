@@ -62,13 +62,11 @@ section .flex {
     background-image: linear-gradient(rgba(43, 74, 97, 0.87), rgba(43, 74, 97, 0.87)), url(../images/header-footer-back.png);
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 .header .container {
     padding: 39px 0px;
 }
-
 
 .header-logo {
     width: 186px;
@@ -85,7 +83,7 @@ section .flex {
 }
 
 .nav-list {
-    margin-right: 212px;
+    margin-right: 216px;
 }
 
 
@@ -138,9 +136,11 @@ section .flex {
 .lang-item {
     color: rgba(255, 255, 255, 1);
 }
-.lang-item:first-child{
+
+.lang-item:first-child {
     padding-right: 12px;
 }
+
 .lang-item:first-child::after {
     content: "";
     width: 36px;
@@ -203,6 +203,7 @@ section .flex {
     align-items: flex-end;
 
 }
+
 .hero-div-column {
     flex-direction: column;
     margin: 0px 606px 0px 0px;
@@ -211,7 +212,9 @@ section .flex {
 .social-item:not(:first-of-type) {
     padding: 24px 0px 0px 0px;
 }
-
+.social-img:not(:first-of-type) {
+    padding: 24px 0px 0px 0px;
+}
 .hero-item:last-child {
     width: 376px;
     height: 123px;
@@ -228,7 +231,8 @@ section .flex {
     border: 3px solid rgba(38, 199, 234, 1);
 }
 
-.hero-list-ua+.link-ua {
+.hero-list-ua+.link-ua,
+.hero-list-eng+.link-eng {
     display: inline-block;
 }
 
@@ -370,7 +374,7 @@ section .flex {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background:rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 
@@ -401,6 +405,19 @@ section .flex {
 }
 
 .dictionary-text-ua:last-child {
+    line-height: 24px;
+    margin-top: 40px;
+}
+.dictionary-text-eng:first-child {
+    text-align: center;
+
+    /*todo var. 2 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dictionary-text-eng:last-child {
     line-height: 24px;
     margin-top: 40px;
 }
@@ -436,33 +453,37 @@ section .flex {
     font-size: 24px;
     line-height: 100%;
 }
-
-
-.dictionary-item .dictionary-text-eng:first-child::after {
-    padding-top: 31px;
-    margin-left: 85px;
-    margin-right: 83px;
+        /* ENG */
+.dictionary-text-eng:first-child::after {
     content: "";
-    display: flex;
-    align-self: center;
-    background-position: center;
-    background-image: url(../images/arrow-left.png);
-    background-repeat: no-repeat;
-    text-align: center;
-}
-
-.dictionary-item:nth-child(2) .dictionary-text-eng:first-child::after {
-    background-image: url(../images/bird.png);
-    background-size: 150px 40px;
-
-}
-
-.dictionary-item:nth-child(5) .dictionary-text-eng:first-child::after {
-    background-image: url(../images/bird.png);
     width: 152px;
     height: 40px;
+    text-align: center;
+    margin-top: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
+.dictionary-item:nth-child(3n + 1) .dictionary-text-eng:first-child::after {
+    background-image: url(../images/arrow-dictionary.png);
+    transform: rotate(-180deg);
+}
+
+.dictionary-item:nth-child(3n + 2) .dictionary-text-eng:first-child::after {
+    background-image: url(../images/bird-dictionary.png);
+
+}
+
+.dictionary-item:nth-child(3n + 3) .dictionary-text-eng:first-child::after {
+    background-image: url(../images/arrow-dictionary.png);
+
+}
+
+.dictionary-text-eng {
+    font-family: HeadlandOne;
+    font-size: 24px;
+    line-height: 100%;
+}
 /*! FOOTER */
 
 .footer {
@@ -470,13 +491,10 @@ section .flex {
     padding-bottom: 31px;
     background-color: gray;
     background-image:
-        linear-gradient(
-            rgba(43, 74, 97, 0.87),
-            rgba(43, 74, 97, 0.87)
-        ),
+        linear-gradient(rgba(43, 74, 97, 0.87),
+            rgba(43, 74, 97, 0.87)),
         url(../images/header-footer-back.png);
     background-repeat: no-repeat;
-        background-size: cover;
 }
 
 .box-logo-address {
@@ -517,7 +535,7 @@ section .flex {
 
 .mails-text,
 .mails-svg {
-    margin-right:19px;
+    margin-right: 19px;
     color: #FFFFFF;
 }
 
@@ -532,4 +550,3 @@ section .flex {
     line-height: 0.65;
     color: #FFFFFF;
 }
-
